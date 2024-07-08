@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "Area.h"
 
 class ofApp : public ofBaseApp{
 
@@ -21,15 +22,17 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-	bool clickOnRegionA; 
-    bool clickOnRegionB;
-    bool clickOnRegionC;
-    bool clickOnRegionD;
-    bool clickOnRegionE;
-    bool clickOnRegionF;
-    bool clickOnRegionG;
-    bool clickOnRegionH;
-    bool clickOnRegionI;
 	int turnCounter; 
-		
+	
+	ofImage initialWallpaper; 
+	ofImage exes; 
+	ofImage os; 
+	ofTrueTypeFont titleFont; 
+
+	ofImage currentImage; 
+	vector<Area*> listOfAreas;
+
+	int xCoord; 
+	int yCoord;
+
 };
